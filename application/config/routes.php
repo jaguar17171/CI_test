@@ -38,8 +38,14 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "frontpage";
 $route['404_override'] = '';
+$route['login[/]*(.*)'] = 'auth/login/$1';
+$route['logout'] = 'auth/logout';
+$route['register'] = 'auth/register';
+// routes for admin panel
+$route['admin'] = 'admin/index';
+
 
 
 /* End of file routes.php */
